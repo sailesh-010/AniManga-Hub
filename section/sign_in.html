@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/src/style.css" rel="stylesheet">
+    <title>Vite + TS</title>
+  </head>
+  <body class="w-screen h-screen min-h-screen min-w-full flex flex-col font-sans bg-neutral-50 text-gray-900 transition-colors duration-300
+             dark:bg-gray-900 dark:text-gray-200 overflow-x-hidden">
+  <header>
+    <nav class="bg-white shadow-md py-4 sticky top-0 z-50 dark:bg-gray-800 w-full">
+        <div class="container mx-auto px-4 flex flex-wrap justify-between items-center w-full">
+            <a href="#" class="text-2xl font-bold text-pink-600 mb-2 md:mb-0 dark:text-pink-400">AniManga Hub</a>
+            <div class="flex flex-grow justify-end md:justify-center items-center space-x-2 sm:space-x-4">
+                <div class="relative w-full max-w-xs sm:max-w-sm md:max-w-md hidden md:block">
+                    <input type="text" id="global-search" placeholder="Search anime or manga..." class="pl-10 pr-4 py-2 rounded-full bg-gray-100 border border-gray-200 w-full focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-200 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:focus:ring-pink-400">
+                    <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">🔍</span>
+                </div>
+                <a href="../section/home/home.html" id="nav-home" class="nav-link text-gray-600 hover:text-pink-600 font-medium transition-colors duration-200 text-sm sm:text-base dark:text-gray-300 dark:hover:text-pink-400">Home</a>
+                <a href="../section/library/manga.html" id="nav-library" class="nav-link text-gray-600 hover:text-pink-600 font-medium transition-colors duration-200 text-sm sm:text-base dark:text-gray-300 dark:hover:text-pink-400">Library</a>
+                <a href="../section/updates/manga.html" id="nav-updates" class="nav-link text-gray-600 hover:text-pink-600 font-medium transition-colors duration-200 text-sm sm:text-base dark:text-gray-300 dark:hover:text-pink-400">Updates</a>
+                <a href="../section/history/manga.html" id="nav-history" class="nav-link text-gray-600 hover:text-pink-600 font-medium transition-colors duration-200 text-sm sm:text-base dark:text-gray-300 dark:hover:text-pink-400">History</a>
+                <a href="../section/browse/manga.html" id="nav-browse" class="nav-link text-gray-600 hover:text-pink-600 font-medium transition-colors duration-200 text-sm sm:text-base dark:text-gray-300 dark:hover:text-pink-400">Browse</a>
+                <a href="../section/Ai_recommendation.html" id="nav-ai-recommender" class="nav-link text-gray-600 hover:text-pink-600 font-medium transition-colors duration-200 text-sm sm:text-base dark:text-gray-300 dark:hover:text-pink-400">AI Recommender</a>
+
+                <div class="border-l border-gray-300 h-6 mx-2 hidden lg:block dark:border-gray-600"></div>
+
+                <a href="../section/sign_in.html" id="nav-sign-in" class="nav-link text-gray-600 hover:text-pink-600 font-medium transition-colors duration-200 text-sm sm:text-base dark:hover:text-gray-300 underline dark:text-pink-400">Sign In</a>
+                <a id="theme-toggle" class="text-gray-600 hover:text-pink-600 transition-colors duration-200 text-xl dark:text-gray-300 dark:hover:text-pink-400">
+                    💡
+                </a>
+                <a href="../section/account/account.html" id="nav-account" class="nav-link text-gray-600 hover:text-pink-600 font-medium transition-colors duration-200 text-sm sm:text-base dark:text-gray-300 dark:hover:text-pink-400">Account</a>
+            </div>
+        </div>
+    </nav>
+  </header>
+  <main class="flex flex-col items-center justify-center flex-1 min-h-[80vh] bg-white dark:bg-gray-900 py-12 px-4 sm:px-6 lg:px-8">
+    <div class="w-full max-w-4xl mx-auto bg-white dark:bg-gray-800 rounded-xl shadow-lg flex flex-col md:flex-row overflow-hidden">
+      <!-- Sign In Section -->
+      <div id="signin-section" class="w-full flex justify-center items-center">
+        <div class="w-full max-w-xl md:max-w-2xl p-20 flex flex-col justify-center items-center text-center bg-white dark:bg-gray-800 rounded-xl shadow-lg">
+          <h2 class="text-4xl font-bold text-pink-600 dark:text-pink-400 mb-4 text-center">Log In to AniManga Hub</h2>
+          <p class="text-base text-gray-500 dark:text-gray-300 mb-8 text-center">Quick &amp; Simple way to start your journey of manga and anime</p>
+          <form class="space-y-7 w-full">
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">EMAIL ADDRESS</label>
+              <input id="email" name="email" type="email" autocomplete="email" required
+                class="appearance-none block w-full px-5 py-4 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent dark:bg-gray-700 dark:text-white text-lg"
+                placeholder="you@example.com">
+            </div>
+            <div>
+              <label for="password" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">PASSWORD</label>
+              <input id="password" name="password" type="password" autocomplete="current-password" required
+                class="appearance-none block w-full px-5 py-4 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent dark:bg-gray-700 dark:text-white text-lg"
+                placeholder="********">
+            </div>
+            <div class="flex items-center justify-between">
+              <label class="flex items-center text-sm text-gray-600 dark:text-gray-300 cursor-pointer">
+                <input type="checkbox" class="form-checkbox h-5 w-5 text-pink-600 transition duration-150 ease-in-out mr-2">
+                Remember Me
+              </label>
+              <a href="#" class="text-sm text-pink-600 hover:underline dark:text-pink-400">Forgot Password?</a>
+            </div>
+            <button type="submit"
+              class="w-full py-4 px-6 bg-pink-600 hover:bg-pink-700 text-white text-lg font-semibold rounded-lg shadow transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2 dark:bg-pink-500 dark:hover:bg-pink-600">
+              Log In
+            </button>
+          </form>
+          <div class="mt-6 text-center">
+            <span class="text-gray-600 dark:text-gray-300 text-base">Don't have an account?</span>
+            <button id="show-signup" class="ml-2 text-pink-600 hover:underline dark:text-pink-400 font-semibold transition-colors duration-200 text-base" onclick="document.getElementById('signup-section').classList.remove('hidden');document.getElementById('signin-section').classList.add('hidden');">Sign Up</button>
+          </div>
+        </div>
+      </div>
+      <!-- Sign Up Section -->
+      <div id="signup-section" class="w-full px-0 py-20 flex flex-col justify-center items-center bg-transparent border-0 shadow-none hidden">
+        <h2 class="text-4xl font-bold text-pink-600 dark:text-pink-400 mb-4 text-center">Create Your Account</h2>
+        <p class="text-lg text-gray-500 dark:text-gray-300 mb-8 text-center">Join AniManga Hub and start your adventure!</p>
+        <form class="space-y-8 w-full max-w-2xl" autocomplete="off">
+          <div>
+            <label for="signup-email" class="block text-xs font-medium text-gray-700 dark:text-gray-200 mb-1">EMAIL ADDRESS</label>
+            <input id="signup-email" name="signup-email" type="email" autocomplete="email" required
+              class="appearance-none block w-full px-7 py-6 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent dark:bg-gray-700 dark:text-white text-xl"
+              placeholder="you@example.com">
+          </div>
+          <div>
+            <label for="signup-username" class="block text-xs font-medium text-gray-700 dark:text-gray-200 mb-1">USERNAME</label>
+            <input id="signup-username" name="signup-username" type="text" autocomplete="username" required
+              class="appearance-none block w-full px-6 py-5 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent dark:bg-gray-700 dark:text-white text-lg"
+              placeholder="Choose a username">
+          </div>
+          <div>
+            <label for="signup-password" class="block text-xs font-medium text-gray-700 dark:text-gray-200 mb-1">PASSWORD</label>
+            <input id="signup-password" name="signup-password" type="password" autocomplete="new-password" required
+              class="appearance-none block w-full px-6 py-5 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent dark:bg-gray-700 dark:text-white text-lg"
+              placeholder="Create a password">
+          </div>
+          <div>
+            <label for="signup-password-confirm" class="block text-xs font-medium text-gray-700 dark:text-gray-200 mb-1">CONFIRM PASSWORD</label>
+            <input id="signup-password-confirm" name="signup-password-confirm" type="password" autocomplete="new-password" required
+              class="appearance-none block w-full px-6 py-5 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent dark:bg-gray-700 dark:text-white text-lg"
+              placeholder="Repeat your password">
+          </div>
+          <button type="submit"
+            class="w-full py-4 px-6 bg-pink-600 hover:bg-pink-700 text-white text-lg font-semibold rounded-lg shadow transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2 dark:bg-pink-500 dark:hover:bg-pink-600">
+            Sign Up
+          </button>
+        </form>
+        <div class="mt-4 text-center">
+          <span class="text-gray-600 dark:text-gray-300 text-sm">Already have an account?</span>
+          <button id="show-signin" class="ml-2 text-pink-600 hover:underline dark:text-pink-400 font-semibold transition-colors duration-200" onclick="document.getElementById('signup-section').classList.add('hidden');document.getElementById('signin-section').classList.remove('hidden');">Sign In</button>
+        </div>
+      </div>
+      <script>
+        // Show/hide sign in/up sections for accessibility (for progressive enhancement)
+        document.addEventListener('DOMContentLoaded', function() {
+          const signinSection = document.querySelector('main .md\\:w-1\\/2.p-8.flex.flex-col.justify-center:not(#signup-section)');
+          signinSection.id = 'signin-section';
+        });
+      </script>
+    </div>
+  </main>
+    
+
+    <footer class="bg-gray-100 text-gray-600 py-4 text-center dark:bg-gray-800 dark:text-gray-300 w-full mt-auto">
+      <p>&copy; 2025 AniManga Hub. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
